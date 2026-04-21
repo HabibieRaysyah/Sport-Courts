@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sewa_lapangan/Component/button.dart';
+import 'package:sewa_lapangan/views/payment_method.dart';
 
 class OrderSumary extends StatefulWidget {
   const OrderSumary({super.key});
@@ -221,7 +222,9 @@ class _OrderSumaryState extends State<OrderSumary> {
               heightButton: 50,
               radiusButton: 15,
               text: "Choose Payment Method ➡",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMethod()));
+              },
               color: Colors.black,
             ),
           ],
