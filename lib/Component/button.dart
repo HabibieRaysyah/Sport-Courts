@@ -9,6 +9,7 @@ class Button extends StatelessWidget {
     this.heightButton = 40,
     this.widthButton = double.infinity,
     this.titleSize = 16,
+    this.radiusButton = 20,
   });
   final String text;
   final VoidCallback onPressed;
@@ -16,6 +17,7 @@ class Button extends StatelessWidget {
   final double widthButton;
   final double heightButton;
   final double titleSize;
+  final double radiusButton;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +26,16 @@ class Button extends StatelessWidget {
       height: heightButton,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(text, style: TextStyle(color: Colors.white, fontSize: titleSize)),
-        style: ElevatedButton.styleFrom(backgroundColor: color),
+        child: Text(
+          text,
+          style: TextStyle(color: Colors.white, fontSize: titleSize),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(radiusButton),
+          ),
+        ),
       ),
     );
   }

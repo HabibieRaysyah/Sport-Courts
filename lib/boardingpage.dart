@@ -5,7 +5,7 @@ import 'package:sewa_lapangan/Component/button.dart';
 import 'package:sewa_lapangan/homepage.dart';
 
 class Boardingpage extends StatefulWidget {
-  const Boardingpage({super.key});
+  const Boardingpage({super.key,});
 
   @override
   State<Boardingpage> createState() => _BoardingpageState();
@@ -16,7 +16,7 @@ class _BoardingpageState extends State<Boardingpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -29,9 +29,8 @@ class _BoardingpageState extends State<Boardingpage> {
                 image: DecorationImage(
                   image: NetworkImage(
                     "https://cdn.dribbble.com/userupload/10093106/file/original-b6dd549465ee5871df173b836c97c07e.jpg",
-                    
                   ),
-                  fit: BoxFit.cover
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
